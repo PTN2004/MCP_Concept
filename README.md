@@ -24,46 +24,33 @@
 ## 🛠️ Cài đặt & chạy server
 
 ### 1. Cài đặt thư viện
+` pip install -r requirements.txt `
 
-```bash
-pip install -r requirements.txt
-2. Tạo file .env với nội dung:
-env
-Sao chép
-Chỉnh sửa
-GITHUB_TOKEN=your_github_personal_access_token
-MCP_PORT=8000
-Bạn có thể tạo GitHub token tại: https://github.com/settings/tokens
+### 2. Tạo file .env
+Tạo file .env với nội dung:
+
+`GITHUB_TOKEN=your_github_personal_access_token`
+Bạn có thể tạo GitHub token tại: https://github.com/settings/tokens```
 
 3. Chạy MCP Server
-bash
-Sao chép
-Chỉnh sửa
-python mcp_server.py
+
+`python mcp_server.py`
 Kết quả:
 
-arduino
-Sao chép
-Chỉnh sửa
-🚀 MCP Server GitHub đang chạy trên cổng 8000
-📁 Cấu trúc thư mục
-css
-Sao chép
-Chỉnh sửa
+## 📁 Cấu trúc thư mục
+
 📦 mcp-github-manager
  ┣ 📄 mcp_server.py         # Tập tin khởi tạo MCP Server và định nghĩa các tool
  ┣ 📄 .env                  # Chứa token GitHub và port (không nên commit file này)
  ┣ 📄 requirements.txt      # Thư viện cần thiết
  ┗ 📄 README.md             # File tài liệu (bạn đang đọc nó!)
-🧪 Ví dụ gọi tool (curl)
-bash
-Sao chép
-Chỉnh sửa
+## 🧪 Ví dụ gọi tool (curl)
+
 curl http://localhost:8000/tool/list_repos -X POST -H "Content-Type: application/json" -d '{}'
-🔐 Lưu ý bảo mật
+## 🔐 Lưu ý bảo mật
 KHÔNG commit file .env lên GitHub.
 
 Token GitHub nên cấp quyền phù hợp với nhu cầu sử dụng: repo, delete_repo v.v.
 
-📜 License
+## 📜 License
 MIT License. Dùng thoải mái cho học tập và cá nhân.
